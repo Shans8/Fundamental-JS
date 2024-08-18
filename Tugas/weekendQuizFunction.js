@@ -297,7 +297,17 @@ const users = [
   })
 
   console.log(getUserByEmail);
+
+  const findUserByEmail = (email) => {
+    const result = users.find((user) => {
+        return user.email === email;
+    })
+
+    return result;
+  }
   
+  const userByEmail = findUserByEmail("olivia.white@example.com")
+  console.log(userByEmail);
   
   /*
     Quiz 3: 
