@@ -13,8 +13,10 @@
 
 function simplePromise() {
     return new Promise((resolve, reject) => {
+        const randomNumber = Math.random();
+        console.log(randomNumber);
         setTimeout(() => {
-            if (Math.random < 0.5) {
+            if (randomNumber < 0.5) {
                 reject('Promise rejected!')
             }else {
                 resolve('Promise resolved!')
@@ -44,21 +46,20 @@ simplePromise()
     - Implement `.finally()` to display a message "Operation complete" whether the promise is resolved or rejected.
 */
 
-function paramPromise() {
+function paramPromise(message) {
   return new Promise((resolve, reject) => {
-    let process = true;
     setTimeout(() => {
-      if (process) {
-        resolve('message')
+      if (message) {
+        resolve(message);
       }else {
-        reject('No message provided!')
+        reject('No message provided!');
       }
 
     }, 1000);
   })
 }
 
-paramPromise()
+paramPromise('haloooo')
   .then((response) => {
     console.log(response);
   })
@@ -122,7 +123,7 @@ async function getAdvice(id) {
     const data = await response.json();
     console.log(data);
   } catch (error) {
-    console.log('error', error);
+    console.log(error);
   }
 }
 

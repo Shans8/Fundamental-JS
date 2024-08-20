@@ -1,14 +1,12 @@
 const name = 'Ihsan';
-const bornYear = 2003
-let age = 24
+const bornYear = 2003;
 let hobby = 'lying around';
 let addres = 'Tangerang Selatan';
 
-//console.log(name);
-//console.log(bornYear);
-//console.log(age);
-//console.log(hobby);
-//console.log(addres);
+let output;
 
-const backtickConcat = `Hello,let me introduce my self my name is ${name}. I am ${age} years old. I like to ${hobby}. I live in ${addres}.`;
-console.log(backtickConcat);
+let currentYear = 2024;
+let age = currentYear - bornYear;
+
+output = `Hello,let me introduce my self my name is ${name}. I am ${age} years old. I like to ${hobby}. I live in ${addres}.`;
+console.log(output);
