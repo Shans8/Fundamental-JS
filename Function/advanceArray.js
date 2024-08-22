@@ -123,7 +123,7 @@ const employeeDB = [
   /*
    .find()
   */
-  let employeeFound
+  let employeeFound;
   
   employeeFound = employeeDB.find((employee) => {
     return employee.id === 5;
