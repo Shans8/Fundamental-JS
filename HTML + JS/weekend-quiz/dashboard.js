@@ -1,3 +1,5 @@
+import { users } from "../database/weekendQuiz.js";
+
 document.querySelector(".jsFilter").addEventListener("click", function () {
   document.querySelector(".filter-menu").classList.toggle("active");
 });
@@ -22,3 +24,11 @@ var modeSwitch = document.querySelector('.mode-switch');
 modeSwitch.addEventListener('click', function () {                      document.documentElement.classList.toggle('light');
  modeSwitch.classList.toggle('active');
 });
+
+const loggedInUsername = localStorage.getItem('username');
+
+const loggedIn = users.find((user) => user.email === loggedInUsername);
+console.log(loggedIn);
+
+const accInfo = document.querySelector(".account-info-name")
+accInfo.innerHTML = loggedIn.firstName;
